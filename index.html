@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    <meta name="description" content="Aplikasi Morning Routine untuk meningkatkan produktivitas pagi Anda">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Morning Routine">
+    <title>Morning Routine</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <h1>🌅 Morning Routine</h1>
+                <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">🌙</button>
+            </div>
+            <div class="date-time">
+                <span id="dayName"></span>, <span id="dateDisplay"></span>
+                <p id="greeting"></p>
+            </div>
+        </header>
+
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <div class="progress-info">
+                <span>Progress Hari Ini: <strong id="progressText">0/5</strong></span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Motivasi Quote -->
+        <div class="quote-section" id="quoteSection">
+            <p id="dailyQuote"></p>
+        </div>
+
+        <!-- Checklist Section -->
+        <section class="checklist-section">
+            <h2>📋 Rutinitas Pagi</h2>
+            <div class="checklist" id="checklist">
+                <!-- Items akan ditambahkan oleh JavaScript -->
+            </div>
+            <button class="btn-reset" id="resetBtn">↻ Reset Hari Ini</button>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <h2>📊 Statistik Mingguan</h2>
+            <div class="chart-container">
+                <canvas id="weeklyChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Monthly Stats -->
+        <section class="monthly-section">
+            <h2>📈 Statistik Bulanan</h2>
+            <div class="chart-container">
+                <canvas id="monthlyChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Activity Summary -->
+        <section class="summary-section">
+            <h2>✨ Ringkasan Aktivitas</h2>
+            <div class="summary-grid" id="summaryGrid">
+                <!-- Item ringkasan akan ditambahkan oleh JavaScript -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Konsisten adalah kunci kesuksesan 💪</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
